@@ -1,0 +1,154 @@
+/* --- General --- */
+body {
+  background-color: #aabcd2;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 35px 0 0 0; /* top padding for fixed header */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* --- Header --- */
+.App-header {
+  background-color: #282c34;
+  min-height: 35px;
+  max-height: 70px;
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  font-size: calc(10px + 1vmin);
+  color: white;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.App-logo {
+  height: 50px;
+  margin-right: 10px;
+}
+
+/* --- Footer --- */
+.App-footer {
+  background-color: #282c34;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+  margin-top: 50px;
+}
+
+/* --- Headings --- */
+h2 {
+  text-align: center;
+  color: #0077ff;
+  font-style: italic;
+  background-color: lightblue;
+  border: 2px solid blue;
+  padding: 8px 15px;
+  margin: 20px auto;
+  border-radius: 10px;
+  font-size: 1.5em;
+  max-width: 400px;
+}
+
+/* --- Form Container --- */
+.form1 {
+  width: 90%;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 25px;
+  background-color: rgba(160, 204, 210, 0.6);
+  border-radius: 20px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+@media (min-width: 768px) {
+  .form1 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .full-width {
+    grid-column: span 2;
+  }
+}
+
+/* --- Input fields --- */
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #11cc22;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9em;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* --- Labels --- */
+label {
+  display: block;
+  font-weight: 500;
+  color: #2f4f4f;
+  margin-bottom: 5px;
+}
+
+/* --- Buttons --- */
+.button-group {
+  grid-column: span 2;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+input[type="submit"], input[type="reset"] {
+  border-radius: 10px;
+  padding: 12px 25px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+input[type="reset"] {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+input[type="reset"]:hover {
+  background-color: #c82333;
+}
+
+/* --- Error Messages --- */
+.error-message {
+  color: red;
+  font-size: 0.85em;
+  margin-top: 5px;
+  font-style: italic;
+}
